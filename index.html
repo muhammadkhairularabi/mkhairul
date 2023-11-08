@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .floating { 
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+
+@keyframes floating {
+	0% { transform: translate(0, 0px); }
+	50% { transform: translate(0, 15px); }
+	100% { transform: translate(0, -0px); } 
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo-Gopay-png-removebg-preview.png" class="logo"></a>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">MENU</a></li>
+                <li><a href="">SERVICE</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Bayar Apa Aja Pakai<br><span>GOPAY</span></h2>
+                <p>Dompet digital serba bisa. Temukan kemudahan transfer dan bayar dengan GoPay. Aplikasi ringan untuk transfer ke mana saja, langsung masuk, dan bebas biaya hingga 100x/bulan</p>
+            <a href="https://gopay.co.id/">Download Sekarang</a>
+            </div>
+            <div class="imgBox">
+                <img class="floating" src="How_to_P2P_5-removebg-preview.png" class="gopay">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><a href="https://twitter.com/gopayindonesia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="twitter.png" onclick="imgSlider('.img/img1.png'); changeCircleColor('#017143')"></a></li>
+            <li><a href="https://web.facebook.com/gopayindonesia/?locale=id_ID&_rdc=1&_rdr"><img src="facebook (1).png" onclick="imgSlider('.img/img3.png'); changeCircleColor('#eb7495')"></a></li>
+            <li><a href="https://www.instagram.com/gopayindonesia/"><img src="instagram.png" onclick="imgSlider('.img/img3.png'); changeCircleColor('#d752b1')"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+         function imgSlider(anything){
+            document.querySelector('.gopay').src = anything 
+         }
+         function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
